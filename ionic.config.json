@@ -1,0 +1,7 @@
+{
+  "name": "JEU_DE_DES",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
