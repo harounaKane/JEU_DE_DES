@@ -7,14 +7,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="text-center"> Tour {{ tour }} </div>
+
+  <div class="d-flex justify-content-around mx-3">
+    <div>
+      <div> {{ joueur_1 }} </div>
+      <div> Score : {{ score_joueur_1 }} </div>
+      <div class="border p-3 text-center my-3"> {{ score_de_j1 }} </div>
+
+      <div class="mt-4 text-center h3" *ngIf="jtp == j1">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </div>
+
+    </div>
+
+    <div>
+      <div> {{ joueur_2 }} </div>
+      <div> Score : {{ score_joueur_2 }} </div>
+      <div class="border p-3 text-center my-3">  {{ score_de_j2 }}  </div>
+      <div class="mt-4 text-center h3" *ngIf="jtp == j2">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </div>
+    </div>
   </div>
+
+  <div class="alert alert-success" *ngIf="aGanger"> Le joueur {{ jtp.nom }} à ganger </div>
+
+  <div class="text-center mt-3">
+    <div class="my-4">Valeur à atteindre : {{ VALEUR_A_ATTEINDRE }} </div>
+    <ion-button (click)="lancer()" >Lancer</ion-button>
+  </div>
+
+  
 </ion-content>

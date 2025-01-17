@@ -15,9 +15,7 @@ export class Partie{
     }
 
     lancer(joueur:Joueur){
-        joueur.goblet.lancer();
-
-        this.tour++;
+        joueur.lancer();
     }
 
     verifierGagnant(joueur:Joueur){
